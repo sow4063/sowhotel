@@ -1,0 +1,26 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "sowhotel",
+  "main": "meadowlark.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sow4063/sowhotel.git"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "author": "sow4063",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sow4063/sowhotel/issues"
+  },
+  "homepage": "https://github.com/sow4063/sowhotel#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
