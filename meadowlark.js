@@ -10,12 +10,25 @@ app.set('port', process.env.PORT || 3000);
 
 app.use(express.static(__dirname + '/public'));
 
+app.use(function(req, res, next){
+  res.locals.showTests = app.get('env') !== 'production' && 
+  req.query.test === '1';
+  next();
+});
+
 app.get('/', function(req, res){
   res.render('home');
 });
 
 app.get('/about', function(req, res){
-	res.render('about', { fortune: fortune.getFortune() } );
+	res.render('about', { 
+		fortune: fortune.getFortune(),
+		pageTestScript: '/qa/tests-about.js' 
+	} );
+});
+
+app.get('/contact', function(req, res){
+  res.render('contact');
 });
 
 app.use(function(req, res, next){
