@@ -31,6 +31,14 @@ app.get('/contact', function(req, res){
   res.render('contact');
 });
 
+app.get('/tours/hood-river', function(req, res){
+  res.render('tours/hood-river');
+});
+
+app.get('/tours/request-group-rate', function(req, res){
+  res.render('tours/request-group-rate');
+});
+
 app.use(function(req, res, next){
   res.status(400);
   res.render('404');
